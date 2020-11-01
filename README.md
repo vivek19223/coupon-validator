@@ -19,7 +19,7 @@ create a dev.js file.
 Paste the following code:
 
 module.exports = {
-	mongoURI: <Paste your mongoURI string here>
+	mongoURI: "<Paste your mongoURI string here>"
 }
 
 
