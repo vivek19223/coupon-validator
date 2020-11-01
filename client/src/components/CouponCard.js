@@ -32,8 +32,8 @@ class CouponCard extends Component {
     } else {
       if (deductedAmount.value) {
         this.setState (() => ({
-          data: `Coupon Applied Successfully..!! Amount Paybal : ${deductedAmount.value}`,
-          error: undefined,
+          data: `Coupon Applied Successfully..!! Total Paybal Amount : ${deductedAmount.value}`,
+          error: '',
         }));
       } else {
         this.setState (() => ({

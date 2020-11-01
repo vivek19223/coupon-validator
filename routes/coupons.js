@@ -26,7 +26,6 @@ module.exports = app => {
             `Minimum cart value required is ${coupon.minCartvalue}`
           );
         } else if (coupon.endDate < moment ()) {
-          console.log (moment () - coupon.endDate);
           throw new Error (`Coupon has expired.!!`);
         } else {
           const calcDiscount = cartValue * coupon.percentDiscount / 100;

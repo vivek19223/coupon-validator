@@ -8,7 +8,7 @@ module.exports = app => {
       const percentageCoupons = await PercentageCoupon.find ({});
 
       if (percentageCoupons) {
-        res.send (percentageCoupons);
+        res.status (200).send (percentageCoupons);
       } else {
         throw new Error ({Error: 'No Coupon found'});
       }
@@ -43,9 +43,9 @@ module.exports = app => {
           maxAllowedDiscount,
         }).save ();
       }
-      res.send (newCoupon);
+      res.status (201).send (newCoupon);
     } catch (err) {
-      res.send (err);
+      res.status (400).send (err);
     }
   });
 };

@@ -1,3 +1,4 @@
+const {max} = require ('moment');
 const mongoose = require ('mongoose');
 const FlatCoupon = mongoose.model ('FlatCoupon');
 
@@ -16,13 +17,13 @@ module.exports = app => {
           startDate,
           endDate,
           minimumCartvalue,
-          flatDiscount,
+          flatDiscount: Math.min (flatDiscount, minimumCartvalue),
         }).save ();
       }
-      res.send (newCoupon);
+      res.status (201).send (newCoupon);
     } catch (err) {
       console.log ('Error is thrown :', err);
-      res.send (err);
+      res.status (417).send (err);
     }
   });
 
@@ -31,7 +32,7 @@ module.exports = app => {
       const flatCoupons = await FlatCoupon.find ({});
 
       if (flatCoupons) {
-        res.send (flatCoupons);
+        res.status (200).send (flatCoupons);
       } else {
         throw new Error ({Error: 'No Coupon found'});
       }
