@@ -5,7 +5,9 @@ Project Set-Up:
 Clone the project to your local system.
 Go to the root directory. Open terminal in the root folder.
 Install server Dependencies : npm install
+
 Go to client directory : cd client
+
 Install client-side dependencies : npm install
 
 There are seprate port for server and client development. Since client side of this project is installed by ‘create-react-app’, there are two package.json one each for server and client. Hence, you can install their respective dependencies by command “npm install” in their respective environment.
