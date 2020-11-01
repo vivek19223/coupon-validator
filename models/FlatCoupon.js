@@ -8,7 +8,7 @@ const FlatCouponSchema = new Schema ({
     default: Date.now (),
   },
   endDate: Date,
-  minimumCartValue: Number,
+  minimumCartvalue: Number,
   flatDiscount: Number,
 });
 

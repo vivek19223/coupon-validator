@@ -8,8 +8,11 @@ const PercentageCouponSchema = new Schema ({
     default: Date.now (),
   },
   endDate: Date,
-  minimumCartValue: Number,
+  minimumCartvalue: Number,
   percentDiscount: Number,
+  maxAllowedDiscount: {
+    type: Number,
+  },
 });
 
 mongoose.model ('PercentageCoupon', PercentageCouponSchema);

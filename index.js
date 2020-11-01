@@ -17,6 +17,8 @@ const app = express ();
 app.use (bodyParser.json ());
 
 require ('./routes/coupons') (app);
+require ('./routes/flatCoupons') (app);
+require ('./routes/percentCoupons') (app);
 
 const PORT = process.env.PORT || 5000;
 
